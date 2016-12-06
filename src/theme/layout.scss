@@ -1,0 +1,43 @@
+@mixin no-gutter() {
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+body {
+    background-color: $background_color;
+}
+
+header {
+    height: $header_toolbar_height;
+    overflow: hidden;
+    nav {
+        height: $header_toolbar_height;
+        background-color: $toolbar_color;
+    }
+}
+footer {
+    height: $footer_toolbar_height;
+    nav {
+        height: $footer_toolbar_height;
+        background-color: $toolbar_color;
+    }
+}
+section.content {
+    padding: 6px;
+    background-color: $content_background_color;
+    .container, .container-fluid {
+        @include no-gutter();
+        & > .row {
+            @include no-gutter();
+            & > aside, & > div {
+                @include no-gutter();
+            }
+        }
+    }
+}
+article .meta.container {
+   width: 100%;
+   max-width: 100%;
+}

@@ -1,0 +1,29 @@
+<button (click)="search()">search</button>
+
+<div errorWrap *ngIf="errorCheck">{{ errorCheck }}</div>
+  <button class="btn btn-secondary btn-sm" (click)="goToQuestionform()">Add Questions</button>
+  <br/>
+  <ul>
+
+
+<ngb-accordion [closeOthers]="true" #acc="ngbAccordion">
+  <ngb-panel id="{{ q.idx }}" title="{{ i + 1}}: {{ q.content }}" *ngFor="let q of questionsList.search; let i = index ">
+    <template ngbPanelContent>
+
+      <ol choices>
+        <li>{{ q.varchar_1 }} </li>
+        <li>{{ q.varchar_2 }} </li>
+        <li>{{ q.varchar_3 }} </li>
+        <li>{{ q.varchar_4 }} </li>
+      </ol>
+      <hr/>
+      <h4>{{ q.varchar_5 }}</h4>
+      <button class="btn btn-default btn-sm" (click)="onClickDelete(q.idx)">DELETE</button> | 
+      <button class="btn btn-default btn-sm" (click)="onClickEdit(q.idx)">EDIT</button>
+  
+    </template>
+  </ngb-panel>
+
+
+  
+</ngb-accordion>
