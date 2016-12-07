@@ -4,3 +4,6 @@
 [submodule "src/api/firebase-api"]
 	path = src/api/firebase-api
 	url = http://github.com/thruthesky/firebase-api
+[submodule "src/quizmodule"]
+	path = src/quizmodule
+	url = https://github.com/aysonsteven/englishquiz-module.git
