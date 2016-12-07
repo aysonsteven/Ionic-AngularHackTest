@@ -8,9 +8,8 @@ import { Router, ActivatedRoute, Params } from '@angular/router';
   templateUrl: './quizbuilder-form.component.html'
 })
 export class QuizbuilderComponent implements OnInit {
-
   idx;
-  formStatus = {};
+  formStatus;
   enableBtn:boolean = true;
   isValid:boolean;
   questionForm: POST_DATA = <POST_DATA> {};

@@ -8,7 +8,7 @@ import { Router } from '@angular/router';
   templateUrl: './quiztest.component.html'
 })
 export class QuiztestComponent implements OnInit {
-
+  radio
   validate: string;
   loading:boolean = true;
   errorCheck:string;

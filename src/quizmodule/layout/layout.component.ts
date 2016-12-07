@@ -15,7 +15,7 @@ export class LayoutComponent implements OnInit {
   successMessage: string;
 
   constructor( 
-    private sessionSrvc: AuthsessionService, 
+    public sessionSrvc: AuthsessionService, 
     private user: User ,
     private route: Router
     ) { 

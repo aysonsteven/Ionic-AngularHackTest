@@ -11,7 +11,7 @@ export class QuestionListComponent implements OnInit {
 
   errorCheck:string;
 
-  questionsList = <POSTS>{};
+  questionsList;
 
   constructor( private route: Router, private questions: Quiz ) { 
     this.getQuestions();
